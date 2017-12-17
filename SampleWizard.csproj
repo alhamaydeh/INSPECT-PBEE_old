@@ -876,6 +876,7 @@
     <None Include="Resources\compare.png" />
     <Content Include="icon.ico" />
     <Content Include="icon_1.ico" />
+    <Content Include="Installer\INSPECT_PBEE_INSTALLER.exe" />
     <Content Include="Resources\Help symbol.png" />
     <None Include="Resources\Lightning.png" />
     <None Include="Resources\Text preview.png" />
