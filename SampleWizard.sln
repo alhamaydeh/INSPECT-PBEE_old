@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleWizard", "SampleWizard.csproj", "{D16316C6-BB78-4E9B-96CA-5D0959E2CC47}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "INSPECT-PBEE", "INSPECT-PBEE\INSPECT-PBEE.vdproj", "{2BF45B9D-011A-48D8-920D-E893D52F154E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optimization", "..\Optimization\Optimization\Optimization.csproj", "{01934212-5D81-4AE4-9A15-9B7ED07FF21C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D16316C6-BB78-4E9B-96CA-5D0959E2CC47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D16316C6-BB78-4E9B-96CA-5D0959E2CC47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D16316C6-BB78-4E9B-96CA-5D0959E2CC47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D16316C6-BB78-4E9B-96CA-5D0959E2CC47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BF45B9D-011A-48D8-920D-E893D52F154E}.Debug|Any CPU.ActiveCfg = Debug
+		{2BF45B9D-011A-48D8-920D-E893D52F154E}.Release|Any CPU.ActiveCfg = Release
+		{01934212-5D81-4AE4-9A15-9B7ED07FF21C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01934212-5D81-4AE4-9A15-9B7ED07FF21C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01934212-5D81-4AE4-9A15-9B7ED07FF21C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01934212-5D81-4AE4-9A15-9B7ED07FF21C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

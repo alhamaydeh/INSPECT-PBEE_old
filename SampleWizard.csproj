@@ -1,0 +1,914 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D16316C6-BB78-4E9B-96CA-5D0959E2CC47}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SampleWizard</RootNamespace>
+    <AssemblyName>SampleWizard</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\m_najeeb\Desktop\New folder %283%29\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>96529594452A8AC7B07498527B2D9E1EF0F4A54E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SampleWizard_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord, Version=2.12.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Accord.NET\Framework\Release\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math, Version=2.12.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Accord.NET\Framework\Release\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics, Version=2.12.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Accord.NET\Framework\Release\Accord.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="colorprogressbar">
+      <HintPath>..\..\ColorProgressBarExample\bin\Release\colorprogressbar.dll</HintPath>
+    </Reference>
+    <Reference Include="Controls, Version=1.0.0.2, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\SampleWizard_src(1)\Controls\bin\Debug\Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="demo, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Baker\demo\distrib\demo.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNumerics">
+      <HintPath>..\..\..\..\..\DotNumerics V1.1 Dec-15-2009\Demo\DotNumerics.dll</HintPath>
+    </Reference>
+    <Reference Include="GeneralMatrix">
+      <HintPath>..\..\..\..\..\..\..\..\Dropbox\Dr.AlHamaydeh_Mohamad Najib\AlHamyida Projects\Fragilty Analysis\Optimization\Optimization\bin\Debug\GeneralMatrix.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\..\..\..\..\..\..\..\Dropbox\Dr.AlHamaydeh_Mohamad Najib\AlHamyida Projects\Fragilty Analysis\Optimization\Optimization\bin\Debug\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Mommo.Data, Version=1.0.1467.7686, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Mommo.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MWArray, Version=2.12.0.0, Culture=neutral, PublicKeyToken=e1d84a0da19db86f, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MATLAB\MATLAB Compiler Runtime\v717\toolbox\dotnetbuilder\bin\win32\v2.0\MWArray.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\..\..\..\..\..\Dropbox\Dr.AlHamaydeh_Mohamad Najib\AlHamyida Projects\Fragilty Analysis\Optimization\Optimization\bin\Debug\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Optimization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Fragilty Analysis\Optimization\Optimization\bin\Debug\Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Simphony, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Simphony.NET 4.0\Components\Simphony.dll</HintPath>
+    </Reference>
+    <Reference Include="Simphony.General, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Simphony.NET 4.0\Components\Simphony.General.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86" />
+    <Reference Include="System.Data.SQLite.Linq, Version=2.0.38.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WizardBase">
+      <HintPath>..\..\..\WizardBase.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph">
+      <HintPath>..\..\..\..\..\zedgraph_dll_v515\zedgraph_dll_v5.1.5\ZedGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph.Web">
+      <HintPath>..\..\..\..\..\zedgraph_dll_v515\zedgraph_dll_v5.1.5\ZedGraph.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analysis.Designer.cs">
+      <DependentUpon>Analysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="b1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="b1.Designer.cs">
+      <DependentUpon>b1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="b2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="b2.Designer.cs">
+      <DependentUpon>b2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="b3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="b3.Designer.cs">
+      <DependentUpon>b3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Batch_opt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Batch_opt.Designer.cs">
+      <DependentUpon>Batch_opt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckboxYN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="b1_post.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="b1_post.Designer.cs">
+      <DependentUpon>b1_post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="b2_post.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="b2_post.Designer.cs">
+      <DependentUpon>b2_post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="b3_post.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="b3_post.Designer.cs">
+      <DependentUpon>b3_post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBAPI.cs" />
+    <Compile Include="ForceFailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForceFailForm.Designer.cs">
+      <DependentUpon>ForceFailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ack.Designer.cs">
+      <DependentUpon>Ack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FragilityParameters.cs" />
+    <Compile Include="INSPECT_LIC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INSPECT_LIC.Designer.cs">
+      <DependentUpon>INSPECT_LIC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDARC_LIC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IDARC_LIC.Designer.cs">
+      <DependentUpon>IDARC_LIC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlotResults.cs" />
+    <Compile Include="WaveFileChanger_post.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaveFileChanger_post.designer.cs">
+      <DependentUpon>WaveFileChanger_post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataRecordExtensions.cs" />
+    <Compile Include="ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExecutionMonitors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExecutionMonitors.Designer.cs">
+      <DependentUpon>ExecutionMonitors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExecutionState.cs" />
+    <Compile Include="FEMA_H1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEMA_H1.Designer.cs">
+      <DependentUpon>FEMA_H1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEMA_opt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEMA_opt.Designer.cs">
+      <DependentUpon>FEMA_opt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphViewer.Designer.cs">
+      <DependentUpon>GraphViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers.cs" />
+    <Compile Include="Interpol2.cs" />
+    <Compile Include="Interpol1.cs" />
+    <Compile Include="Limits.cs" />
+    <Compile Include="New1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New1.Designer.cs">
+      <DependentUpon>New1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_brace_sp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_brace_sp.Designer.cs">
+      <DependentUpon>C_brace_sp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Infill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Infill.Designer.cs">
+      <DependentUpon>Edit_Infill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L_NLC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="L_NLC.Designer.cs">
+      <DependentUpon>L_NLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L_NLM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="L_NLM.Designer.cs">
+      <DependentUpon>L_NLM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L_NLJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="L_NLJ.Designer.cs">
+      <DependentUpon>L_NLJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L_NLU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="L_NLU.Designer.cs">
+      <DependentUpon>L_NLU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Infill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Infill.Designer.cs">
+      <DependentUpon>C_Infill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_brace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_brace.Designer.cs">
+      <DependentUpon>C_brace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Moment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Moment.Designer.cs">
+      <DependentUpon>C_Moment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Spring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Spring.Designer.cs">
+      <DependentUpon>C_Spring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Transverse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Transverse.Designer.cs">
+      <DependentUpon>C_Transverse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_edge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_edge.Designer.cs">
+      <DependentUpon>C_edge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_shear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_shear.Designer.cs">
+      <DependentUpon>C_shear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_beam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_beam.Designer.cs">
+      <DependentUpon>C_beam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_column.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_column.Designer.cs">
+      <DependentUpon>C_column.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Hy_Mod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Hy_Mod.Designer.cs">
+      <DependentUpon>Edit_Hy_Mod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Columns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Columns.Designer.cs">
+      <DependentUpon>Edit_Columns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Columns_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Columns_1.Designer.cs">
+      <DependentUpon>Edit_Columns_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Beams_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Beams_1.Designer.cs">
+      <DependentUpon>Edit_Beams_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Beams_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Beams_2.Designer.cs">
+      <DependentUpon>Edit_Beams_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Shear_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Shear_1.Designer.cs">
+      <DependentUpon>Edit_Shear_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_NSECT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_NSECT.Designer.cs">
+      <DependentUpon>Edit_NSECT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Shear_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Shear_2.Designer.cs">
+      <DependentUpon>Edit_Shear_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Edge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Edge.Designer.cs">
+      <DependentUpon>Edit_Edge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Transverse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Transverse.Designer.cs">
+      <DependentUpon>Edit_Transverse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Rotational.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Rotational.Designer.cs">
+      <DependentUpon>Edit_Rotational.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Visco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Visco.Designer.cs">
+      <DependentUpon>Edit_Visco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Friction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Friction.Designer.cs">
+      <DependentUpon>Edit_Friction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Hysteretic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Hysteretic.Designer.cs">
+      <DependentUpon>Edit_Hysteretic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Concrete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Concrete.Designer.cs">
+      <DependentUpon>Edit_Concrete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_REINFORCEMENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_REINFORCEMENT.Designer.cs">
+      <DependentUpon>Edit_REINFORCEMENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_MASONRY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_MASONRY.Designer.cs">
+      <DependentUpon>Edit_MASONRY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New.Designer.cs">
+      <DependentUpon>New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NtpClient.cs" />
+    <Compile Include="PGA_Sa_Factor.cs" />
+    <Compile Include="PGA_Sa_Factor_output.cs" />
+    <Compile Include="plot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plot.Designer.cs">
+      <DependentUpon>plot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlotInfo.cs" />
+    <Compile Include="PostProcessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostProcessor.Designer.cs">
+      <DependentUpon>PostProcessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgramMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramMode.Designer.cs">
+      <DependentUpon>ProgramMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressWindow.Designer.cs">
+      <DependentUpon>ProgressWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RadioButtonYN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RangeSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RangeSelector.Designer.cs">
+      <DependentUpon>RangeSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="results_class.cs" />
+    <Compile Include="RunState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RunState.Designer.cs">
+      <DependentUpon>RunState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilites.cs" />
+    <Compile Include="VALL.cs" />
+    <Compile Include="Var.cs" />
+    <Compile Include="WaveBatchExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaveBatchExample.Designer.cs">
+      <DependentUpon>WaveBatchExample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaveFile.cs" />
+    <Compile Include="WaveFileChanger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaveFileChanger.designer.cs">
+      <DependentUpon>WaveFileChanger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaveFileChangerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaveFileChangerList.Designer.cs">
+      <DependentUpon>WaveFileChangerList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Analysis.resx">
+      <DependentUpon>Analysis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="b1.resx">
+      <DependentUpon>b1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="b2.resx">
+      <DependentUpon>b2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="b3.resx">
+      <DependentUpon>b3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Batch_opt.resx">
+      <DependentUpon>Batch_opt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="b1_post.resx">
+      <DependentUpon>b1_post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="b2_post.resx">
+      <DependentUpon>b2_post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="b3_post.resx">
+      <DependentUpon>b3_post.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForceFailForm.resx">
+      <DependentUpon>ForceFailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ack.resx">
+      <DependentUpon>Ack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INSPECT_LIC.resx">
+      <DependentUpon>INSPECT_LIC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IDARC_LIC.resx">
+      <DependentUpon>IDARC_LIC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaveFileChanger_post.resx">
+      <DependentUpon>WaveFileChanger_post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExecutionMonitors.resx">
+      <DependentUpon>ExecutionMonitors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEMA_H1.resx">
+      <DependentUpon>FEMA_H1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEMA_opt.resx">
+      <DependentUpon>FEMA_opt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphViewer.resx">
+      <DependentUpon>GraphViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New1.resx">
+      <DependentUpon>New1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_brace_sp.resx">
+      <DependentUpon>C_brace_sp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Infill.resx">
+      <DependentUpon>Edit_Infill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="L_NLC.resx">
+      <DependentUpon>L_NLC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="L_NLM.resx">
+      <DependentUpon>L_NLM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="L_NLJ.resx">
+      <DependentUpon>L_NLJ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="L_NLU.resx">
+      <DependentUpon>L_NLU.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Infill.resx">
+      <DependentUpon>C_Infill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_brace.resx">
+      <DependentUpon>C_brace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Moment.resx">
+      <DependentUpon>C_Moment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Spring.resx">
+      <DependentUpon>C_Spring.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Transverse.resx">
+      <DependentUpon>C_Transverse.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_edge.resx">
+      <DependentUpon>C_edge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_shear.resx">
+      <DependentUpon>C_shear.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_beam.resx">
+      <DependentUpon>C_beam.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_column.resx">
+      <DependentUpon>C_column.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Hy_Mod.resx">
+      <DependentUpon>Edit_Hy_Mod.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Columns.resx">
+      <DependentUpon>Edit_Columns.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Columns_1.resx">
+      <DependentUpon>Edit_Columns_1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Beams_1.resx">
+      <DependentUpon>Edit_Beams_1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Beams_2.resx">
+      <DependentUpon>Edit_Beams_2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Shear_1.resx">
+      <DependentUpon>Edit_Shear_1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_NSECT.resx">
+      <DependentUpon>Edit_NSECT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Shear_2.resx">
+      <DependentUpon>Edit_Shear_2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Edge.resx">
+      <DependentUpon>Edit_Edge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Transverse.resx">
+      <DependentUpon>Edit_Transverse.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Rotational.resx">
+      <DependentUpon>Edit_Rotational.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Visco.resx">
+      <DependentUpon>Edit_Visco.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Friction.resx">
+      <DependentUpon>Edit_Friction.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Hysteretic.resx">
+      <DependentUpon>Edit_Hysteretic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Concrete.resx">
+      <DependentUpon>Edit_Concrete.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_REINFORCEMENT.resx">
+      <DependentUpon>Edit_REINFORCEMENT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_MASONRY.resx">
+      <DependentUpon>Edit_MASONRY.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New.resx">
+      <DependentUpon>New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plot.resx">
+      <DependentUpon>plot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostProcessor.resx">
+      <DependentUpon>PostProcessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramMode.resx">
+      <DependentUpon>ProgramMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressWindow.resx">
+      <DependentUpon>ProgressWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RangeSelector.resx">
+      <DependentUpon>RangeSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RunState.resx">
+      <DependentUpon>RunState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaveBatchExample.resx">
+      <DependentUpon>WaveBatchExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaveFileChanger.resx">
+      <DependentUpon>WaveFileChanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaveFileChangerList.resx">
+      <DependentUpon>WaveFileChangerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DatabaseDataSet.xsc">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabaseDataSet.xss">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\FEMA.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SampleWizard_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bitmap1.bmp" />
+    <Content Include="Help symbol.bmp" />
+    <None Include="Resources\ins_h.png" />
+    <None Include="Resources\inspect_logo1.png" />
+    <None Include="Resources\inspect_logo.png" />
+    <None Include="Resources\welcome3.png" />
+    <None Include="Resources\welcome2.png" />
+    <None Include="Resources\welcome1.png" />
+    <None Include="Resources\icon1.png" />
+    <None Include="Resources\stock-vector-file-icons-granite-series-simple-glyph-stile-icons-in-versions-the-icons-are-designed-at-x-216342223.png" />
+    <None Include="Resources\Nodel_Help.PNG" />
+    <None Include="Resources\View.png" />
+    <None Include="Resources\sider1.png" />
+    <None Include="Resources\icon_new1.png" />
+    <None Include="Resources\icon_new.png" />
+    <None Include="Resources\Modify.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Exit.png" />
+    <None Include="Resources\Capt22ure.PNG" />
+    <None Include="Resources\Delete1.png" />
+    <None Include="Resources\compare.png" />
+    <Content Include="icon.ico" />
+    <Content Include="icon_1.ico" />
+    <Content Include="Resources\Help symbol.png" />
+    <None Include="Resources\Lightning.png" />
+    <None Include="Resources\Text preview.png" />
+    <None Include="Resources\icon.png" />
+    <None Include="Resources\Help symbol1.png" />
+    <None Include="Resources\Previous.png" />
+    <None Include="Resources\Next.png" />
+    <None Include="Resources\Create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fakes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="System.Data.SQLite">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
