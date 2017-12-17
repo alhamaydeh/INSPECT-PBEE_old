@@ -887,6 +887,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fakes\" />
+    <Folder Include="Optimization\" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="System.Data.SQLite">
